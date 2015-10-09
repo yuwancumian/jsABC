@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+	var people = {
+         _name : '大坏蛋',
+         getName :function (name) {
+            var len = arguments.length;
+            switch (len) {
+                case 0:
+                    return _name;
+                case 1:
+                    return name;
+            }
+        }
+    }
+    function student() {
+        this.name = '小学生';
+        this.sayhello = function () {
+            return '请叫我雷锋';
+        }
+    }
+    var stu = new student();
+    document.writeln(stu.sayhello() + stu.name + people.getName('你好'));
+</script>

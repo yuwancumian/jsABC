@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
+	<style type="text/css">
+		#mv{
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" id ="mv">
+		<a href="" class="btn btn-primary">123</a>
+		<input type="text" class="btn btn-primary">
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+function main(mv) {
+  var counter = 0;
+  var tick = setInterval(function() {
+    mv.style.top = counter + "px";
+    counter += 1;
+    if (counter > 100) {
+      clearInterval(tick);
+    }
+  }, 100);
+}
+
+main(document.getElementById("mv"));
+
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<script type="text/javascript">
+	a = 1;
+ 
+function hehe() {
+ 
+    alert(a);
+ 
+	  var a = 2; // 这里用var声明，表示声明为局部变量，他会覆盖上面a的作用域，相当于在函数顶部
+	  					 // 声明了一句 var a;
+	  					 // 但是其值是 undefined;
+
+	  alert(a);
+ 
+}
+ 
+hehe();
+	
+</script>

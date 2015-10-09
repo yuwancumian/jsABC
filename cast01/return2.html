@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+    var a =  {
+       a1 : function () {
+		 alert('a1');  
+	   },
+	   a2 : 123
+    };
+	var b = (function () {
+		var b1 = function () {
+			alert("b1")
+		}
+		return {
+			b1: b1
+		}
+	})();
+	var c = function () {
+		var c1 = "c123";
+		return c1;	
+	};
+	//alert(a.a2);
+	//b.b1();
+	alert(c());
+</script>

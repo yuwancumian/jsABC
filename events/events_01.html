@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="">111</a>
+</body>
+<script>
+	window.onload = function () {
+		//直接用 body 会报错		
+		//用 document.body 则不会
+		document.body.onclick = function(){
+			alert('aaa');
+		}
+		// body 有高度因素的制约，而 document 不会有高度制约，整个浏览器都是document
+		document.onclick = function () {
+			alert('bbb');
+		}	
+	
+	}
+</script>
+</html>

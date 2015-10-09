@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+	function people() {
+        var _name = '大坏蛋';
+        return {
+            getName: function () {//采用闭包，将不打算被外界访问的私有字段封存起来，采用方法的方式暴露共用接口
+                return _name;
+            },
+            getName: function (name) {
+                var len = arguments.length;
+                switch (len) {
+                    case 0:
+                        return _name;
+                    case 1:
+                        return name;
+                }
+            }
+        }
+    }
+    function student() {
+        this.level = '小学生';
+        this.sayhello = function () {
+            return '请叫我雷锋';
+        }
+    }
+    student.prototype = new people();//使用原型扩展父级对象产生继承关系
+    var stu = new student();
+    document.writeln(stu.sayhello() + stu.level + stu.getName('你好'));
+</script>
